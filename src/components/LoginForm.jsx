@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 export default function LoginForm() {
   //state
@@ -21,7 +21,6 @@ export default function LoginForm() {
       <h1>Bienvenue chez nous!</h1>
       <br />
       <h2>Connectez-vous</h2>
-
       <input
         value={inputValue}
         onChange={handleChange}
@@ -29,13 +28,9 @@ export default function LoginForm() {
         placeholder="Entrez votre prénom..."
         required="required"
       />
-      <button
-        onClick={() => {
-          navigate("/order-page");
-        }}
-      >
-        Accéder à votre espace
-      </button>
+      <Link to="/order-page">
+        <button>Accéder à votre espace</button>
+      </Link>
     </form>
   );
 }

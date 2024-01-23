@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
-export default function OrderPage({ handleChange }) {
+export default function OrderPage() {
   const navigate = useNavigate();
   return (
     <>
