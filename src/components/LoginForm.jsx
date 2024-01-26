@@ -32,9 +32,6 @@ export default function LoginForm() {
           placeholder="Entrez votre prénom "
           required="required"
         />
-
-        <br />
-        
         <button>Accéder à mon espace</button>
       </div>
     </LoginFormStyled>
