@@ -46,7 +46,6 @@ export default function LoginForm() {
 }
 
 const LoginFormStyled = styled.form`
-  background: green;
   max-width: 500px;
   min-width: 400px;
   padding: 2.5rem 2rem;
