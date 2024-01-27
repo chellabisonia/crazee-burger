@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { BsPersonCircle } from "react-icons/bs";
-
+import { IoChevronForwardOutline } from "react-icons/io5";
 export default function LoginForm() {
   //state
   const [inputValue, setInputValue] = useState("");
@@ -25,7 +25,7 @@ export default function LoginForm() {
         <hr />
         <h2>Connectez-vous</h2>
       </div>
-      <div className="inputContainer">
+      <div className="input-with-icon">
         <BsPersonCircle className="icon" />
         <input
           value={inputValue}
@@ -35,8 +35,12 @@ export default function LoginForm() {
           required="required"
         />
       </div>
-      <br />
-      <button>Accéder à mon espace</button>
+      <div>
+        <button className="button-with-icon">
+          <span>Accéder à mon espace</span>
+          <IoChevronForwardOutline className="icon" />
+        </button>
+      </div>
     </LoginFormStyled>
   );
 }
@@ -65,7 +69,7 @@ const LoginFormStyled = styled.form`
     font-size: 36px;
   }
 
-  .inputContainer {
+  .input-with-icon {
     display: flex;
     /* border: 1px solid red; */
     align-items: center;
@@ -75,7 +79,7 @@ const LoginFormStyled = styled.form`
     margin-bottom: 18px;
     border-radius: 5px;
   }
-  .icon {
+  &.icon {
     font-size: 15px;
     color: gray;
     margin-right: 8px;
@@ -91,9 +95,46 @@ const LoginFormStyled = styled.form`
     background: white;
     color: lightgray;
   }
-  button {
+  .button-with-icon {
+    width: 100%;
+    border: 1px solid #ff9f1b;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    white-space: nowrap;
+    text-decoration: none;
+    line-height: 1;
     font-family: Arial, Helvetica, sans-serif;
-    width: 240px;
-    height: 35px;
+
+    padding: 18px 24px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 800;
+    color: white;
+    background-color: #ff9f1b;
+
+    &:hover:not(:disabled) {
+      background-color: white;
+      color: #ff9f1b;
+      border: 1px solid #ff9f1b;
+      transition: all 200ms ease-out;
+    }
+    &:active {
+      color: white;
+      background-color: #ff9f1b;
+      border: 1px solid #ff9f1b;
+    }
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+    .icon {
+      display: flex;
+      font-size: 15px;
+      margin-left: 10px;
+      justify-content: center;
+      align-items: center;
+    }
   }
 `;
