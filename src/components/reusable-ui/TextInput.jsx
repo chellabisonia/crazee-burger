@@ -2,14 +2,14 @@ import styled from "styled-components";
 
 export default function TextInput({ value, onChange, Icon, ...restProps }) {
   return (
-    <InputStyled>
+    <TextInputStyled>
       {Icon && Icon}
       <input value={value} onChange={onChange} type="text" {...restProps} />
-    </InputStyled>
+    </TextInputStyled>
   );
 }
 
-const InputStyled = styled.div`
+const TextInputStyled = styled.div`
   display: flex;
   align-items: center;
   background-color: #ffffff;
