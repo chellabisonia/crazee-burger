@@ -1,11 +1,14 @@
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 import styled from "styled-components";
-import { BsPersonCircle } from "react-icons/bs";
 import { IoChevronForwardOutline } from "react-icons/io5";
+import Input from "./reusable-ui/Input";
+import { BsPersonCircle } from "react-icons/bs";
+
 export default function LoginForm() {
-  //state
+  //State
   const [inputValue, setInputValue] = useState("");
+
   const navigate = useNavigate();
   //comportements
   const handleSubmit = (event) => {
@@ -17,6 +20,7 @@ export default function LoginForm() {
     const valueAfterChange = event.target.value;
     setInputValue(valueAfterChange);
   };
+
   //affichage
   return (
     <LoginFormStyled action="submit" onSubmit={handleSubmit}>
@@ -25,17 +29,14 @@ export default function LoginForm() {
         <hr />
         <h2>Connectez-vous</h2>
       </div>
-      <div className="input-with-icon">
-        <BsPersonCircle className="icon" />
-        <input
+      <div>
+        <Input
           value={inputValue}
           onChange={handleChange}
-          type="text"
-          placeholder="Entrez votre prénom "
-          required="required"
+          Icon={<BsPersonCircle className="icon" />}
+          placeholder={"Entrez votre prénom "}
+          required
         />
-      </div>
-      <div>
         <button className="button-with-icon">
           <span>Accéder à mon espace</span>
           <IoChevronForwardOutline className="icon" />
@@ -66,33 +67,6 @@ const LoginFormStyled = styled.form`
     margin: 20px 10px 10px;
     color: white;
     font-size: 36px;
-  }
-
-  .input-with-icon {
-    display: flex;
-    /* border: 1px solid red; */
-    align-items: center;
-    background-color: #ffffff;
-    border-radius: 5px;
-    padding: 18px 24px 18px 24px;
-    margin-bottom: 18px;
-    border-radius: 5px;
-  }
-  &.icon {
-    font-size: 15px;
-    color: gray;
-    margin-right: 8px;
-  }
-  input {
-    border: none;
-    color: #17161a;
-    font-size: 15px;
-    background: white;
-    width: 100%;
-  }
-  &::placeholder {
-    background: white;
-    color: lightgray;
   }
   .button-with-icon {
     width: 100%;
