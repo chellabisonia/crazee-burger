@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import LoginForm from "../components/LoginForm";
-import Logo from "../components/reusable-ui/Logo";
+import LoginForm from "./LoginForm";
+import Logo from "../../reusable-ui/Logo";
 
 export default function LoginPage() {
   return (
@@ -12,7 +12,6 @@ export default function LoginPage() {
 }
 
 const LoginPageStyled = styled.div`
-  /* background: red; */
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -22,7 +21,7 @@ const LoginPageStyled = styled.div`
 
   &::before {
     content: "";
-    background: url("/images/burger&fries-background.jpg")rgba(0, 0, 0, 0.7);
+    background: url("/images/burger&fries-background.jpg") rgba(0, 0, 0, 0.7);
     background-size: cover;
     background-position: center;
     background-blend-mode: darken;

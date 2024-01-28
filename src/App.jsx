@@ -1,8 +1,8 @@
 import "./App.css";
-import OrderPage from "./pages/OrderPage";
-import LoginPage from "./pages/LoginPage";
+import OrderPage from "./components/pages/order/OrderPage";
+import LoginPage from "./components/pages/login/LoginPage";
 import { Routes, Route } from "react-router-dom";
-import ErrorPage from "./pages/ErrorPage";
+import ErrorPage from "./components/pages/error/ErrorPage";
 
 function App() {
   return (
