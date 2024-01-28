@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import styled from "styled-components";
 import { IoChevronForwardOutline } from "react-icons/io5";
-import Input from "./reusable-ui/Input";
+import TextInput from "./reusable-ui/TextInput";
 import { BsPersonCircle } from "react-icons/bs";
 
 export default function LoginForm() {
@@ -30,7 +30,7 @@ export default function LoginForm() {
         <h2>Connectez-vous</h2>
       </div>
       <div>
-        <Input
+        <TextInput
           value={inputValue}
           onChange={handleChange}
           Icon={<BsPersonCircle className="icon" />}
