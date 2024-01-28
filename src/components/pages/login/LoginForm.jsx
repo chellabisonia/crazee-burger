@@ -4,8 +4,12 @@ import styled from "styled-components";
 import { IoChevronForwardOutline } from "react-icons/io5";
 import TextInput from "../../reusable-ui/TextInput";
 import { BsPersonCircle } from "react-icons/bs";
+<<<<<<< HEAD:src/components/pages/login/LoginForm.jsx
 import PrimaryButton from "../../reusable-ui/PrimaryButton";
 import { theme } from "../../../theme";
+=======
+import PrimaryButton from "./reusable-ui/PrimaryButton";
+>>>>>>> 18cb9f8 (♻️ F03: LOGIN > LoginForm > Create PrimaryButton):src/components/LoginForm.jsx
 
 export default function LoginForm() {
   //State
