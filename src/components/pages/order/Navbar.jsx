@@ -7,14 +7,13 @@ export default function Navbar() {
   return (
     <NavbarStyled>
       <Logo />
-
       <NavbarRightSide username={username} />
     </NavbarStyled>
   );
 }
 
 const NavbarStyled = styled.nav`
-  background: blue;
+  background: white;
   height: 10vh;
   display: flex;
   justify-content: space-between;
