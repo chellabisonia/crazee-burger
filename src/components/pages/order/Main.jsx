@@ -1,7 +1,11 @@
 import styled from "styled-components";
 import {theme} from "../../../theme/index";
 export default function Main() {
-  return <MainStyled></MainStyled>;
+  return <MainStyled>
+<div className="basket">Basket</div>
+<div className="menu">Menu</div>
+
+  </MainStyled>;
 }
 
 const MainStyled = styled.div`
@@ -10,5 +14,14 @@ const MainStyled = styled.div`
   border-bottom-left-radius: ${theme.borderRadius.extraRound};
   border-bottom-right-radius: ${theme.borderRadius.extraRound};
   box-shadow: 0px 8px 20px 8px #00000033 inset;
+  overflow-y: scroll;
+  display : grid;
+  grid-template-columns: 25% 1fr;
+.basket{
+background: pink;
+}
 
+.menu{
+background:purple;
+}
 `;
