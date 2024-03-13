@@ -6,7 +6,7 @@ export default function Main() {
   return (
     <MainStyled>
       {/* <div className="basket">Basket</div> */}
-     <Menu />
+      <Menu />
     </MainStyled>
   );
 }
@@ -21,10 +21,7 @@ const MainStyled = styled.div`
   display: grid;
   //this code will be used for Basket
   /* grid-template-columns: 25% 1fr; */
-  grid-template-columns: 1fr;
   /* .basket {
     background: pink;
   } */
-
-  
 `;
