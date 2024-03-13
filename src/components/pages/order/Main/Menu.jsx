@@ -12,9 +12,10 @@ export default function Menu() {
       {menu.map((produit) => {
         return (
           <Product
-            title={produit.title}
-            price={produit.price}
-            imageSource={produit.imageSource}
+          {...produit}
+            // title={produit.title}
+            // price={produit.price}
+            // imageSource={produit.imageSource}
             
           />
         );
