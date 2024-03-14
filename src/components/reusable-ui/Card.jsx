@@ -45,7 +45,7 @@ const CardStyled = styled.div`
       object-fit: contain;
     }
   }
-
+ 
   .text-info {
     display: grid;
     grid-template-rows: 30% 70%;
