@@ -1,23 +1,23 @@
 import { useState } from "react";
 import styled from "styled-components";
-import { fakeMenu2 } from "../../../../fakeData/fakeMenu";
+import { fakeMenu1, fakeMenu2 } from "../../../../fakeData/fakeMenu";
 import { theme } from "../../../../theme";
 import Product from "./Product";
 
 export default function Menu() {
-  const [menu, setMenu] = useState(fakeMenu2);
+  const [menu, setMenu] = useState(fakeMenu1);
 
   return (
     <MenuStyled>
       {menu.map((produit) => {
         return (
           <Product
-          {...produit}
+            {...produit}
             // title={produit.title}
             // price={produit.price}
             // imageSource={produit.imageSource}
             
-          />
+            />
         );
       })}
     </MenuStyled>
