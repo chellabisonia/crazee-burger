@@ -1,23 +1,23 @@
 import { useState } from "react";
 import styled from "styled-components";
-import { fakeMenu1, fakeMenu2 } from "../../../../fakeData/fakeMenu";
+import { fakeMenu2 } from "../../../../fakeData/fakeMenu";
 import { theme } from "../../../../theme";
-import Product from "./Product";
+import { formatPrice } from "../../../../utils/maths";
+import Card from "../../../reusable-ui/Card";
 
 export default function Menu() {
-  const [menu, setMenu] = useState(fakeMenu1);
+  const [menu, setMenu] = useState(fakeMenu2);
 
   return (
-    <MenuStyled>
-      {menu.map((produit) => {
+    <MenuStyled className="menu">
+      {menu.map(({ id, title, imageSource, price }) => {
         return (
-          <Product
-            {...produit}
-            // title={produit.title}
-            // price={produit.price}
-            // imageSource={produit.imageSource}
-            
-            />
+          <Card
+            key={id}
+            title={title}
+            imageSource={imageSource}
+            leftDescription={formatPrice(price)}
+          />
         );
       })}
     </MenuStyled>
@@ -28,10 +28,8 @@ const MenuStyled = styled.div`
   background: ${theme.colors.background_white};
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  /* grid-template-rows: repeat(3, 1fr); */
-  grid-column-gap: 50px;
   grid-row-gap: 60px;
   padding: 50px 50px 150px;
   justify-items: center;
-  box-shadow: 0px 8px 20px 8px #00000033 inset;
+  box-shadow: 0px 8px 20px 8px rgba(0, 0, 0, 0.2) inset;
 `;
