@@ -19,22 +19,20 @@ const TextInputStyled = styled.div`
   margin-bottom: 18px;
 
   .icon {
-    font-size: ${theme.fonts.sizes.P0};
+    font-size: ${theme.fonts.sizes.SM};
     color: ${theme.colors.greySemiDark};
     margin-right: 8px;
   }
   input {
     border: none;
     color: ${theme.colors.dark};
-    font-size: ${theme.fonts.sizes.P0};
+    font-size: ${theme.fonts.sizes.SM};
     background: white;
     width: 100%;
 
     &::placeholder {
-    background: ${theme.colors.white};
-    color: ${theme.colors.greyMedium};
+      background: ${theme.colors.white};
+      color: ${theme.colors.greyMedium};
+    }
   }
-
-  }
- 
 `;
