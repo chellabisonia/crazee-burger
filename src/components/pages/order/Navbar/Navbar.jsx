@@ -5,11 +5,10 @@ import Logo from "../../../reusable-ui/Logo";
 import { theme } from "../../../../theme";
 import { reloadPage } from "../../../../utils/window";
 export default function Navbar() {
-  const { username } = useParams();
   return (
     <NavbarStyled>
       <Logo className={"logo-order-page"} onClick={reloadPage} />
-      <NavbarRightSide username={username} />
+      <NavbarRightSide />
     </NavbarStyled>
   );
 }

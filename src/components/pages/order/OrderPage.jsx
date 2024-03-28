@@ -3,16 +3,26 @@ import styled from "styled-components";
 import Navbar from "./Navbar/Navbar";
 import Main from "./Main/Main";
 import { theme } from "../../../theme/index";
+import { useState } from "react";
+// import OrderContext from "../../../../src/context/OrderContext";
+import OrderContext from "../../../context/OrderContext.jsx";
 
 export default function OrderPage() {
-  const { username } = useParams();
+  //state
+  const [isModeAdmin, setIsModeAdmin] = useState(false);
+  //comportement
+const orderContextValue = {isModeAdmin, setIsModeAdmin,};
+  //affichage
+
   return (
-    <OrderPageStyled>
-      <div className="container">
-        <Navbar username={username} />
-        <Main />
-      </div>
-    </OrderPageStyled>
+    <OrderContext.Provider value={orderContextValue}>
+      <OrderPageStyled>
+        <div className="container">
+          <Navbar  />
+          <Main />
+        </div>
+      </OrderPageStyled>
+    </OrderContext.Provider>
   );
 }
 const OrderPageStyled = styled.div`
