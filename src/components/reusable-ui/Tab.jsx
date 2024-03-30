@@ -1,9 +1,11 @@
 import styled from "styled-components";
 import { theme } from "../../theme/index.jsx";
-export default function Tab({Icon}) {
-  return <TabStyled>
-    <div className="icon">{Icon}</div>
-    </TabStyled>;
+export default function Tab({ Icon, onClick, className }) {
+  return (
+    <TabStyled onClick={onClick} className={className}>
+      <div className="icon">{Icon}</div>
+    </TabStyled>
+  );
 }
 
 const TabStyled = styled.button`
@@ -31,13 +33,12 @@ const TabStyled = styled.button`
 
   //border-radius
   border-radius: 5px 5px 0px 0px;
-  
 
-  :hover{
-   
-    border-bottom:2px solid ${theme.colors.background_white} ;
+  &:hover {
+    border-bottom: 2px solid ${theme.colors.background_white};
   }
-.icon{
-   display: flex;
-}
+
+  .icon {
+    display: flex;
+  }
 `;
