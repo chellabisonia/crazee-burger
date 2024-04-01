@@ -9,7 +9,7 @@ import { toast } from "react-toastify";
 import OrderContext from "../../../../context/OrderContext";
 
 export default function NavbarRightSide() {
-  const {isModeAdmin, setIsModeAdmin} = useContext(OrderContext)
+  const { isModeAdmin, setIsModeAdmin } = useContext(OrderContext);
 
   const displayToastNotification = () => {
     if (!isModeAdmin) {
@@ -31,11 +31,12 @@ export default function NavbarRightSide() {
   return (
     <NavbarRightSideStyled>
       <ToggleButton
+        isChecked={isModeAdmin}
         labelIfUnchecked="ACTIVER LE MODE ADMIN"
         labelIfChecked="DÉSACTIVER LE MODE ADMIN"
         onToggle={displayToastNotification}
       />
-      <Profile  />
+      <Profile />
       <ToastAdmin />
     </NavbarRightSideStyled>
   );
@@ -45,3 +46,4 @@ const NavbarRightSideStyled = styled.div`
   display: flex;
   padding-right: 50px;
 `;
+ 
