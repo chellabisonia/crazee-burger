@@ -8,18 +8,19 @@ export default function AdminTabs({ isCollapsed, setIsCollapsed }) {
   return (
     <AdminTabsStyled>
       <Tab
+        label=""
         Icon={isCollapsed ? <FiChevronUp /> : <FiChevronDown />}
         onClick={() => setIsCollapsed(!isCollapsed)}
         className={isCollapsed ? "is-active" : ""}
       />
 
-      {/* <Tab
-        Icon={<AiOutlinePlus />
-      }
-        onClick={() => setIsCollapsed(!isCollapsed)}
-        className={!isCollapsed ? "is-active" : ""}
+      <Tab
         label="Ajouter un produit"
-      /> */}
+        Icon={<AiOutlinePlus />}
+        onClick={() => setIsCollapsed(!isCollapsed)}
+        className={isCollapsed ? "is-active" : ""}
+        label="Ajouter un produit"
+      />
     </AdminTabsStyled>
   );
 }
@@ -28,12 +29,12 @@ const AdminTabsStyled = styled.div`
   display: flex;
   padding: 0 22px;
 
-   .is-active {
+  .is-active {
     background: ${theme.colors.background_dark};
     color: ${theme.colors.background_white};
     border-color: ${theme.colors.background_dark};
   }
-  button{
+  button {
     margin-left: 1px;
-  } 
+  }
 `;

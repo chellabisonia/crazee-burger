@@ -4,7 +4,7 @@ export default function Tab({ Icon, onClick, className, label }) {
   return (
     <TabStyled onClick={onClick} className={className}>
       <div className="icon">{Icon}</div>
-     {label && <span className="label">{label}</span>}
+    {label && <span className="label">{label}</span>}
     </TabStyled>
   );
 }
