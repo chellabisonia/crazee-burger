@@ -6,7 +6,7 @@ import { theme } from "../../../../theme";
 import ToastAdmin from "./ToastAdmin";
 import { useContext } from "react";
 import { toast } from "react-toastify";
-import OrderContext from "../../../../context/OrderContext";
+import OrderContext from "../../../../context/OrderContext.jsx";
 
 export default function NavbarRightSide() {
   const { isModeAdmin, setIsModeAdmin } = useContext(OrderContext);
