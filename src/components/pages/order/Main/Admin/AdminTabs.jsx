@@ -5,6 +5,7 @@ import { theme } from "../../../../../theme/index.jsx";
 import { useContext } from "react";
 import OrderContext from "../../../../../context/OrderContext.jsx";
 import { getTabsConfig } from "./getTabsConfig.jsx";
+
 export default function AdminTabs() {
   const {
     isCollapsed,
@@ -16,7 +17,7 @@ export default function AdminTabs() {
   const selectTab = (tabSelected) => {
     setIsCollapsed(false); // ouvre moi le panel dans tous les cas
     setCurrentTabSelected(tabSelected); // réactualises l'onglet séléctionné
-  }
+  };
 
   const tabs = getTabsConfig(currentTabSelected);
 
@@ -33,7 +34,7 @@ export default function AdminTabs() {
           label={tab.label}
           Icon={tab.Icon}
           onClick={() => selectTab(tab.index)}
-          className={tab.className}
+          className={currentTabSelected === tab.index ? "is-active" : ""}
         />
       ))}
     </AdminTabsStyled>
