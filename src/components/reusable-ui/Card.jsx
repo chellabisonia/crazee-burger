@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { theme } from "../../theme/index";
 import PrimaryButton from "./PrimaryButton";
-import {formatPrice}  from "../../utils/maths";
+import { formatPrice } from "../../utils/maths";
 
 export default function Card({ title, imageSource, leftDescription }) {
   return (
@@ -30,7 +30,7 @@ const CardStyled = styled.div`
   grid-template-rows: 65% 1fr;
   padding: 20px;
   padding-bottom: 10px;
-  box-shadow: -8px 8px 20px 0px rgb(0 0 0 / 20%);
+  box-shadow: ${theme.shadows.medium};
   border-radius: ${theme.borderRadius.extraRound};
 
   .image {
@@ -45,7 +45,7 @@ const CardStyled = styled.div`
       object-fit: contain;
     }
   }
- 
+
   .text-info {
     display: grid;
     grid-template-rows: 30% 70%;
