@@ -5,12 +5,7 @@ import OrderContext from "../../../../../context/OrderContext";
 import { getTabSelected, getTabsConfig } from "./getTabsConfig";
 
 export default function AdminPanel({}) {
-  const {
-    isAddTabSelected,
-    isEditTabSelected,
-    currentTabSelected,
-    // setCurrentTabSelected,
-  } = useContext(OrderContext);
+  const { currentTabSelected } = useContext(OrderContext);
 
   const tabs = getTabsConfig(currentTabSelected);
   const tabSelected = getTabSelected(tabs, currentTabSelected);
