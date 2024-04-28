@@ -4,7 +4,7 @@ import { FiChevronDown, FiChevronUp } from "react-icons/fi";
 import { theme } from "../../../../../theme/index.jsx";
 import { useContext } from "react";
 import OrderContext from "../../../../../context/OrderContext.jsx";
-import { getTabsConfig } from "./getTabsConfig.jsx";
+import { tabsConfig } from "./tabsConfig.jsx";
 
 export default function AdminTabs() {
   const {
@@ -19,7 +19,7 @@ export default function AdminTabs() {
     setCurrentTabSelected(tabSelected); // réactualises l'onglet séléctionné
   };
 
-  const tabs = getTabsConfig(currentTabSelected);
+  const tabs = tabsConfig;
 
   return (
     <AdminTabsStyled>
