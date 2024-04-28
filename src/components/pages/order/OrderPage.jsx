@@ -11,8 +11,6 @@ export default function OrderPage() {
   //state
   const [isModeAdmin, setIsModeAdmin] = useState(false);
   const [isCollapsed, setIsCollapsed] = useState(false);
-  const [isAddTabSelected, setIsAddTabSelected] = useState(true);
-  const [isEditTabSelected, setIsEditTabSelected] = useState(false);
   const [currentTabSelected, setCurrentTabSelected] = useState("add");
   //comportement
   const orderContextValue = {
@@ -20,10 +18,6 @@ export default function OrderPage() {
     setIsModeAdmin,
     isCollapsed,
     setIsCollapsed,
-    isAddTabSelected,
-    setIsAddTabSelected,
-    isEditTabSelected,
-    setIsEditTabSelected,
     currentTabSelected,
     setCurrentTabSelected,
   };
